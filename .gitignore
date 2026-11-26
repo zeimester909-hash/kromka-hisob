@@ -1,0 +1,6 @@
+.buildozer/
+.venv-apk/
+bin/
+__pycache__/
+*.py[cod]
+.vscode/
