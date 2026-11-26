@@ -19,9 +19,6 @@ import os
 
 from chek import create_receipt_image
 
-# Klaviatura ochilganda kiritish maydoni ko'rinib turishi uchun
-Window.softinput_mode = "below_target"
-
 BG = (0.06, 0.09, 0.16, 1)
 CARD = (0.10, 0.15, 0.25, 1)
 BLUE = (0.35, 0.65, 1, 1)
@@ -98,6 +95,8 @@ class KromkaApp(MDApp):
 
     # ---------- Hayot sikli ----------
     def build(self):
+        # Configure Android's soft keyboard after the activity has initialized.
+        Window.softinput_mode = "below_target"
         self.title = "Kromka Hisoblagich"
         self.theme_cls.primary_palette = "Blue"
         self.theme_cls.theme_style = "Dark"
